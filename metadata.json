@@ -1,0 +1,37 @@
+{
+    "title": "DEEP OC obj_detect_pytorch",
+    "summary": "Object detection with pytorch",
+    "description": [
+		"This is obj_detect_pytorch application using DEEPaaS API",
+           "",
+           "**References**\n",
+           ""
+	],
+    "keywords": [
+        "docker"
+    ],
+    "license": "MIT",
+    "date_creation": "YYYY-MM-DD",
+    "sources": {
+		"dockerfile_repo": "https://github.com/silkedh/DEEP-OC-obj_detect_pytorch",
+		"docker_registry_repo": "https://hub.docker.com/u/silked/deep-oc-obj_detect_pytorch",
+		"code": "https://github.com/silkedh/obj_detect_pytorch"
+	},
+    "continuous_integration": {
+        "build_status_badge": "https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-obj_detect_pytorch/master",
+        "build_status_url": "https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-obj_detect_pytorch/job/master"
+    },
+    "tosca": [
+        {
+            "title": "Mesos (CPU)",
+            "url": "https://raw.githubusercontent.com/indigo-dc/tosca-templates/master/deep-oc/deep-oc-mesos-webdav.yml",
+            "inputs": [
+                "rclone_conf",
+                "rclone_url",
+                "rclone_vendor",
+                "rclone_user",
+                "rclone_pass"
+            ]
+        }
+    ]
+}

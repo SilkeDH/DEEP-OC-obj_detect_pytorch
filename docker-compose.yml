@@ -1,0 +1,30 @@
+version: '2.3'
+
+# if 'docker-compose run' is used
+# do not forget '--service-ports'!
+
+services:
+    obj_detect_pytorch:
+      image: https://hub.docker.com/u/silked/deep-oc-obj_detect_pytorch
+      ports:
+        - 5000:5000
+        - 6006:6006
+      entrypoint: ["deepaas-run", "--listen-ip=0.0.0.0"]
+
+
+    obj_detect_pytorch-gpu:
+      image: https://hub.docker.com/u/silked/deep-oc-obj_detect_pytorch:gpu
+      runtime: nvidia
+      ports:
+        - 5000:5000
+        - 6006:6006
+      entrypoint: ["deepaas-run", "--listen-ip=0.0.0.0"]
+
+
+    obj_detect_pytorch-rclone:
+      extends:
+        service: obj_detect_pytorch
+      volumes:
+        - $HOME/.config/rclone:/srv/.rclone
+      environment:
+        - RCLONE_CONFIG=/srv/.rclone/rclone.conf
