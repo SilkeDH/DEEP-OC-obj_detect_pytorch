@@ -2,8 +2,8 @@
     "title": "DEEP Open Catalogue: Object Detection and Classification with Pytorch",
     "summary": "A trained Region Convolutional Neural Network (Faster RCNN) for object detection and classification.",
     "description": [
-	"This is a plug-and-play tool for object detection and classification using deep neural networks (Faster R-CNN",
-	" ResNet-50 FPN Architecture) that were already pretrained on the [COCO Dataset](http://cocodataset.org/#home).", 
+	"This is a plug-and-play tool for object detection and classification using deep neural networks (Faster R-CNN ",
+	"ResNet-50 FPN Architecture) that were already pretrained on the [COCO Dataset](http://cocodataset.org/#home). ", 
 	"The code uses the Pytorch Library, more information about it can be found at [Pytorch-Object-Detection](https://pytorch.org/docs/", 	
 	"stabletorchvision/models.html#object-detection-instance-segmentation-and-person-keypoint-detection).\n",
 
@@ -21,7 +21,7 @@
 	"**References**\n",
         "[1]: Shaoqing Ren, Kaiming He, Ross Girshick, Jian Sun. [Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks]",
 	"(https://arxiv.org/abs/1506.01497)",
-	"arXiv preprint (2016): 1506-01496.\n"
+	"arXiv preprint (2016): 1506-01497.\n"
 	],
     "keywords": [
         "docker", "services", "library/pytorch", "rcnn"
