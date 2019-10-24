@@ -11,7 +11,7 @@
 ARG tag=1.10.0-py3
 
 # Base image, e.g. tensorflow/tensorflow:1.12.0-py3
-FROM pytorch/pytorch:${tag}
+FROM pytorch/pytorch
 
 LABEL maintainer='Silke Donayre'
 LABEL version='0.0.0'
