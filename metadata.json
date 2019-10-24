@@ -14,7 +14,7 @@
 
 	"This module works on uploaded pictures and gives as output the rectangle coordinates x1,y1 and x2,y2 were the",
  	"classified object is located.", 
-	"It also provides you the probability of the classified detected object.\n"
+	"It also provides you the probability of the classified detected object.\n",
 
 	"<img class='fit', src='https://pytorch.org/tutorials/_static/img/tv_tutorial/tv_image01.png'/>\n",
 
