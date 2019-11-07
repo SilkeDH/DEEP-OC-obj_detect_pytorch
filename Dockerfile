@@ -78,7 +78,9 @@ RUN wget https://downloads.rclone.org/rclone-current-linux-amd64.deb && \
 #    rm -rf /root/.cache/pip/* && \
 #    rm -rf /tmp/*
 
-RUN git clone WIP/api_v2 https://github.com/indigo-dc/deepaas && \
+
+
+RUN git clone -b WIP/api_v2 https://github.com/indigo-dc/deepaas && \
 	cd deepaas && \
 	pip install --no-cache-dir -U . && \
 	rm -rf /root/.cache/pip/* && \
