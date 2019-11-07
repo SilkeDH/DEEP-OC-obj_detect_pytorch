@@ -69,6 +69,7 @@ RUN wget https://downloads.rclone.org/rclone-current-linux-amd64.deb && \
     rm -rf /root/.cache/pip/* && \
     rm -rf /tmp/*
 
+
 # Install DEEPaaS from PyPi
 # Install FLAAT (FLAsk support for handling Access Tokens)
 #RUN pip install --no-cache-dir \
@@ -83,6 +84,11 @@ RUN git clone WIP/api_v2 https://github.com/indigo-dc/deepaas && \
 	rm -rf /root/.cache/pip/* && \
 	rm -rf /tmp/* && \
 	cd ..
+
+#Run opencv architecture
+RUN dpkg --add-architecture i386 &&\
+	apt-get update &&\
+	apt-get install libgtk2.0-dev
 
 # Disable FLAAT authentication by default
 ENV DISABLE_AUTHENTICATION_AND_ASSUME_AUTHENTICATED_USER yes
