@@ -11,7 +11,7 @@
 ARG tag=1.10.0-py3
 
 # Base image, e.g. tensorflow/tensorflow:1.12.0-py3
-FROM pytorch/pytorch
+FROM pytorch/pytorch:1.2-cuda10.0-cudnn7-runtime
 
 LABEL maintainer='Silke Donayre'
 LABEL version='0.0.0'
@@ -79,6 +79,7 @@ RUN wget https://downloads.rclone.org/rclone-current-linux-amd64.deb && \
 #    rm -rf /tmp/*
 
 
+RUN pip install --upgrade cython
 
 RUN git clone -b WIP/api_v2 https://github.com/indigo-dc/deepaas && \
 	cd deepaas && \
@@ -88,9 +89,9 @@ RUN git clone -b WIP/api_v2 https://github.com/indigo-dc/deepaas && \
 	cd ..
 
 #Run opencv architecture
-RUN dpkg --add-architecture i386 &&\
+RUN DEBIAN_FRONTEND=noninteractive dpkg --add-architecture i386 &&\
 	apt-get update &&\
-	apt-get install libgtk2.0-dev
+	apt-get  -y install libgtk2.0-dev
 
 # Disable FLAAT authentication by default
 ENV DISABLE_AUTHENTICATION_AND_ASSUME_AUTHENTICATED_USER yes
