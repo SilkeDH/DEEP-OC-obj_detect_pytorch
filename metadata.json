@@ -3,28 +3,46 @@
     "summary": "A trained Region Convolutional Neural Network (Faster RCNN) for object detection and classification.",
     "description": [
 	"This is a plug-and-play tool for object detection and classification using deep neural networks (Faster R-CNN ",
-	"ResNet-50 FPN Architecture) that were already pretrained on the [COCO Dataset](http://cocodataset.org/#home). ", 
-	"The code uses the Pytorch Library, more information about it can be found at [Pytorch-Object-Detection](https://pytorch.org/docs/", 	
+	"ResNet-50 FPN Architecture [1]) that were already pretrained on the [COCO Dataset](http://cocodataset.org/#home). ", 
+	"The code uses the Pytorch Library, more information can be found at [Pytorch-Object-Detection](https://pytorch.org/docs/", 	
 	"stabletorchvision/models.html#object-detection-instance-segmentation-and-person-keypoint-detection).\n",
 
-	"The PREDICT method expects an image as input (or the url of an image) and will return a JSON with ",
+	"The PREDICT method expects an image as input and will return a JSON with ",
 	"the predictions that are greater than the probability threshold. Let's say you have an image of a cat ", 
 	"and a dog together and the probability output was 50% a dog and 80% a cat,",
 	"if you set the threshold to 70%, the only detected object will be the cat, because it's probability is grater than 70%.\n",
 
-	"This module works on uploaded pictures and gives as output the rectangle coordinates x1,y1 and x2,y2 were the",
+	"This module works on uploaded images and gives as output the rectangle coordinates x1,y1 and x2,y2 were the",
  	"classified object is located.", 
 	"It also provides you the probability of the classified detected object.\n",
 
-	"<img class='fit', src='https://pytorch.org/tutorials/_static/img/tv_tutorial/tv_image01.png'/>\n",
+	"<img class='fit', src='https://raw.githubusercontent.com/SilkeDH/obj_detect_pytorch/V2/reports/figures/dog_broccoli.png'/>\n",
+	    
+	"The TRAINING method uses transfer learning and expects different parameters like learning rate, name of the clases, etc.",
+	"Transfer learning focuses on storing knowledge gained while solving one problem and applying it to a different but related",
+	"problem. To achieve it, the output layer of the pre-trained model is removed and a new one with the new number of outputs is", 
+	"added. Only that new layer will be trained [1]. An example of transferred learning is provided an implemented in this module.\n",
+	    
+	"The model requires a new dataset with the classes that are going to be classified and detected. In this case the Penn-Fudan",
+	"Database for Pedestrian Detection and Segmentation was used to detect pedestrians.\n",
+	
+	"<img class='fit', src='./reports/figures/pytorchobj.png'/>\n"
+	</p>
 
+	"To try this in the module, the two dataset folders (Images and masks) must be placed in the `obj_detect_pytorch/dataset/`", 
+	"folder. More information about the code and the structuring of the custom dataset can be found at [Torchvision Object Detection Finetuning](https://pytorch.org/tutorials/intermediate/torchvision_tutorial.html).\n",
+	    
 	"**References**\n",
         "[1]: Shaoqing Ren, Kaiming He, Ross Girshick, Jian Sun. [Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks]",
 	"(https://arxiv.org/abs/1506.01497)",
 	"arXiv preprint (2016): 1506-01497.\n"
+        "[2]: West Jeremy, Ventura Dan, Warnick Sean. [Spring Research Presentation: A Theoretical Foundation for Inductive Transfer]",
+	"Brigham Young University, College of Physical and Mathematical Sciences. (2007).\n" 
+	    
+	    
 	],
     "keywords": [
-        "docker", "services", "library/pytorch", "rcnn"
+        "docker", "services", "library/pytorch", "rcnn", "faster-rcnn"
     ],
     "license": "MIT",
     "date_creation": "2019-10-17",
