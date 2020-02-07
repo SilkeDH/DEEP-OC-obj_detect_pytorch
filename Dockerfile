@@ -74,11 +74,11 @@ RUN wget https://downloads.rclone.org/rclone-current-linux-amd64.deb && \
 
 # Install DEEPaaS from PyPi
 # Install FLAAT (FLAsk support for handling Access Tokens)
-#RUN pip install --no-cache-dir \
-#        'deepaas>=0.5.0' \
-#        flaat && \
-#    rm -rf /root/.cache/pip/* && \
-#    rm -rf /tmp/*
+RUN pip install --no-cache-dir \
+        'deepaas>=1.0.0' \
+        flaat && \
+    rm -rf /root/.cache/pip/* && \
+    rm -rf /tmp/*
 
 
 RUN pip install --upgrade cython
