@@ -26,7 +26,7 @@
 	"The model requires a new dataset with the classes that are going to be classified and detected. In this case the Penn-Fudan",
 	"Database for Pedestrian Detection and Segmentation was used to detect pedestrians.\n",
 	
-	"<img class='fit', src='./reports/figures/pytorchobj.png'/>\n"
+	"<img class='fit', src='https://raw.githubusercontent.com/SilkeDH/obj_detect_pytorch/master/reports/figures/pytorchobj.png'/>\n"
 
 	"To try this in the module, the two dataset folders (Images and masks) must be placed in the `obj_detect_pytorch/dataset/`", 
 	"folder. More information about the code and the structuring of the custom dataset can be found at [Torchvision Object Detection Finetuning](https://pytorch.org/tutorials/intermediate/torchvision_tutorial.html).\n",
