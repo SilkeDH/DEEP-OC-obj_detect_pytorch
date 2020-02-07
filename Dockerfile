@@ -83,12 +83,6 @@ RUN wget https://downloads.rclone.org/rclone-current-linux-amd64.deb && \
 
 RUN pip install --upgrade cython
 
-RUN git clone -b WIP/api_v2 https://github.com/indigo-dc/deepaas && \
-	cd deepaas && \
-	pip install --no-cache-dir -U . && \
-	rm -rf /root/.cache/pip/* && \
-	rm -rf /tmp/* && \
-	cd ..
 
 #Run opencv architecture
 RUN DEBIAN_FRONTEND=noninteractive dpkg --add-architecture i386 &&\
