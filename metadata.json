@@ -9,7 +9,7 @@
 	"The PREDICT method expects an image as input and will return a JSON with ",
 	"the predictions that are greater than the probability threshold. Let's say you have an image of a cat ",
 	"and a dog together and the probability output was 50% a dog and 80% a cat,",
-	"if you set the threshold to 70%, the only detected object will be the cat, because it's probability is grater than 70%.\n",
+	"if you set the threshold to 70%, the only detected object will be the cat, because its probability is grater than 70%.\n",
 
 	"This module works on uploaded images and gives as output the rectangle coordinates x1,y1 and x2,y2 were the",
  	"classified object is located.",
@@ -27,8 +27,8 @@
 
 	"<img class='fit' width='70%', src='https://raw.githubusercontent.com/SilkeDH/obj_detect_pytorch/master/reports/figures/pytorchobj.png'/>\n",
 
-	"To try this in the module, the two dataset folders (Images and masks) must be placed in the obj_detect_pytorch/dataset/",
-	"folder. More information about the code and the structuring of the custom dataset can be found at [Torchvision Object Detection Finetuning](https://pytorch.org/tutorials/intermediate/torchvision_tutorial.html).\n",
+	"To try this in the module, the two dataset folders (Images and Masks) must be placed in the obj_detect_pytorch/dataset/",
+	"folder. More information about the code, the Penn Fudan Dataset and the structuring of a custom dataset can be found at [Torchvision Object Detection Finetuning](https://pytorch.org/tutorials/intermediate/torchvision_tutorial.html).\n",
 
 	"**References**\n",
         "[1]: Shaoqing Ren, Kaiming He, Ross Girshick, Jian Sun. [Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks](https://arxiv.org/abs/1506.01497)",
